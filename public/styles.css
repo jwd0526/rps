@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Exo 2", sans-serif;
+}
+
+body {
+    background-color: #24272E;
+}
+
+header {
+    background: white;
+    padding: 20px;
+}
+
+header > h1 {
+    color: #24272E;
+    text-align: center;
+    font-size: 40px;
+}
+
+.scoreboard {
+    margin: 20px auto;
+    margin-top: 40px;
+    border: 3px solid white;
+    border-radius: 4px;
+    text-align: center;
+    width: 350px;
+    color: white;
+    font-size: 82px;
+    padding: 20px 20px;
+    position: relative;
+}
+
+.badge {
+    background: #E2584D;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px 10px;
+}
+
+#user-label {
+    position: absolute;
+    top: 45px;
+    left: -45px;
+}
+
+#comp-label {
+    position: absolute;
+    top: 45px;
+    right: -45px;
+}
+
+.result {
+    font-size: 40px;
+    color: white;
+}
+
+.result > p {
+    text-align: center;
+    font-weight: bold;
+    margin: 45px;
+}
+
+.choices {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.choice {
+    border: 4px solid white;
+    border-radius: 50%;
+    margin: 10px;
+    display: inline-block;
+}
+
+.choice > img {
+    padding: 10px;
+    margin: 20px;
+    width: 160px;
+    position: relative;
+}
+
+.choice:hover {
+    cursor: pointer;
+    background: #3e434e;
+}
+
+#action-msg {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    margin: 20px;
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fade-out {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes win {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+@keyframes lose {
+    0% { transform: rotate(0); }
+    50% { transform: rotate(15deg); }
+    100% { transform: rotate(0); }
+}
+
+body.win-animation {
+    animation: win 2s ease-in-out;
+    background-color: green; 
+}
+
+body.lose-animation {
+    animation: lose 2s ease-in-out;
+    background-color: red; 
+}
+
+#lose-message, #win-message, #restart-button {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2em;
+    opacity: 0;
+}
+
+body.fade-green {
+    animation: fade-in 2s forwards;
+    background-color: rgba(0, 255, 0, 0.8); 
+}
+
+body.fade-red {
+    animation: fade-in 2s forwards;
+    background-color: rgba(255, 0, 0, 0.8); 
+}
+
+#restart-button {
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 40px;
+    border-radius: 3px;
+}
+
+#restart-button > p {
+    color: #24272E;
+    font-weight: bold;
+    bottom: 40px;
+}
+
+#restart-button:hover {
+    background: rgb(182, 182, 182);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
